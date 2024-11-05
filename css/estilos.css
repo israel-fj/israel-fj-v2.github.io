@@ -1,6 +1,12 @@
 *{
 	font-family: Trebuchet MS;
 }
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
 .cabecera{
 	border: 2px solid #000;
 	align-items: center;
@@ -16,11 +22,11 @@ nav {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-article a{
+.noticias a{
 	text-decoration: none;
 	color: #959fe9;
 }
-article a:hover{
+.noticias a:hover{
 	text-decoration: underline;
 	color: #000;
 }
@@ -59,18 +65,51 @@ article a:hover{
 }
 .div_menu a:hover{
 	background: linear-gradient(to bottom, transparent, #949ee9);	
+	color: #000;
 }
-.div_menu a:active{
-	background: linear-gradient(to bottom, transparent, #949ee9)!important;	
+.div_menu .activo{
+	background: linear-gradient(to bottom, transparent, #949ee9);
+	color: #000;
 }
 section{
 	border: 2px solid #000;
 	padding: 5px;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	min-height: 60vh;
 }
 section img{
 	margin: 0px 10px 0px 10px;
+}
+
+article h2{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background: linear-gradient(to left, transparent, #949ee9);
+}
+
+
+.bloque1{
+	min-height: 250px;
+}
+.bloque1 a{
+	color: #000;
+	font-weight: bold;
+}
+.bloque1 img{
+	float: right;
+	width: 500px;
+	height: 250px;
+	object-fit: cover;
+}
+.bloque2 a{
+	color: #000;
+	font-weight: bold;
+}
+.bloque2 img{
+	width: 97vw;
+	height: 100px;;
+	object-fit: cover;
 }
 
 .contacto{
@@ -102,7 +141,26 @@ section img{
 	align-content: center;
 }
 
+/* Estilo básico para el formulario */
+form {
+	max-width: 500px;
+	margin: 0 auto; /* Centra el formulario en la página */
+	padding: 20px;
+	border: 1px solid #ccc;
+	background-color: #f9f9f9;
+}
 
+/* Asegura que los elementos estén en bloque y apilados */
+label,
+input,
+textarea,
+button {
+	width: 100%;  /* Asegura que los elementos ocupen todo el ancho disponible */
+	margin-bottom: 15px; /* Espacio entre los campos */
+}
+input[type="checkbox"] {
+	width: auto;
+}
 
 
 footer{
@@ -112,8 +170,14 @@ footer{
 	text-align: center;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	display: flex;
+	align-items: flex-end;
+    align-content: flex-end;
+    justify-content: center;
 }
 footer img{
+	align-items: center;
 	width: 20px;
 	height: 20px;
+	padding: 10px;
 }
